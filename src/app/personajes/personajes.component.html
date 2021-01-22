@@ -1,0 +1,20 @@
+<h1>STAR WARS</h1>
+<h2>Lista personaje</h2>
+<table border=1 .5px>
+    <thead>
+        <th>Nombre</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>Nacimiento</th>
+        <th>Genero</th>
+        <th>Planeta</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td *ngFor="let p of personaje">
+                {{p.name}}
+            </td>
+
+        </tr>
+    </tbody>
+</table>
