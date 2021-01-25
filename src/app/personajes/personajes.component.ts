@@ -48,9 +48,8 @@ export class PersonajesComponent implements OnInit {
       });
   }
 
-  mostarDatosPlanetas(dirPlaneta: string, evento){
-  evento.preventdefault();
-
+  mostrarDatosPlaneta(dirPlaneta: string, evento){
+  evento.preventDefault();
     this.peti.petiADir(dirPlaneta).subscribe(
       datos => {
         this.asignarDatos(datos);
