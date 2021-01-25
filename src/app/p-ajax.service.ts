@@ -13,7 +13,11 @@ export class PAjaxService {
 
   pedirPersonajes(){
     let dir = this.url + "/people/?format=json";
-    return this.http.get<any>(this.url);
+    return this.http.get<any>(dir);
+  }
+
+  petiADir(url1: string){
+    return this.http.get<any>(url1);
   }
 
   pedirPlanetas(){

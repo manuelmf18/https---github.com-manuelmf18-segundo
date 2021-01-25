@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-planeta',
@@ -8,7 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlanetaComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  @Input() planeta: Object;
+
+  constructor() { }
 
   ngOnInit(): void {
   }
