@@ -8,7 +8,7 @@ export class PAjaxService {
   private url:string = "https://swapi.dev/api";
 
   constructor(private http: HttpClient) {
-    
+
    }
 
   pedirPersonajes(){
@@ -17,7 +17,7 @@ export class PAjaxService {
   }
 
   petiADir(url1: string){
-    return this.http.get<any>(url1);
+    return this.http.get<any>(url1+"?format=json");
   }
 
   pedirPlanetas(){

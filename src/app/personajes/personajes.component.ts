@@ -24,14 +24,14 @@ export class PersonajesComponent implements OnInit {
           this.asignarDatos(datos);
         },
         error => console.log("Error: ", error));
-    } 
+    }
 
   asignarDatos(datos: object){
     this.datos= datos;
     console.log(this.datos);
     this.personaje = this.datos.results;
   }
-  
+
   pedirSiguiente() {
     this.peti.petiADir(this.datos.next).subscribe(
       datos => {
@@ -50,6 +50,7 @@ export class PersonajesComponent implements OnInit {
 
   mostrarDatosPlaneta(dirPlaneta: string, evento){
   evento.preventDefault();
+    console.log("dir planeta ese", dirPlaneta);
     this.peti.petiADir(dirPlaneta).subscribe(
       datos => {
         this.asignarDatos(datos);

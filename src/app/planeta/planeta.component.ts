@@ -7,11 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PlanetaComponent implements OnInit {
 
-  @Input() planeta: Object;
+  @Input() planeta: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
